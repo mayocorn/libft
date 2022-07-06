@@ -6,7 +6,7 @@
 /*   By: mayocorn <twitter@mayocornsuki>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/07 02:31:16 by mayocorn          #+#    #+#             */
-/*   Updated: 2022/07/07 03:59:09 by mayocorn         ###   ########.fr       */
+/*   Updated: 2022/07/07 04:36:00 by mayocorn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,7 @@ static char	**split_str(const char *s, char c, size_t size)
 	char	**res;
 	size_t	i;
 
-    i = 0;
+	i = 0;
 	res = (char **)malloc((size + 1) * sizeof(char *));
 	if (res == NULL)
 		return (NULL);
@@ -74,7 +74,7 @@ static char	*get_split_str(const char **s, char c)
 	while (**s == c)
 		(*s)++;
 	size = 0;
-	while (*s[size] != c && *s[size] != '\0')
+	while ((*s)[size] != c && (*s)[size] != '\0')
 		size++;
 	res = (char *)malloc((size + 1) * sizeof(char));
 	if (res == NULL)
